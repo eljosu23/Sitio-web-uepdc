@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu-base{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 1.5s;
+    padding: 30px;
+    z-index: 10;
+   background-color: white;
+}
+.logo{
+    position: relative;
+    color: #408ac7;
+    transition: 1.5s;
+    text-decoration: none;
+
+}
+header.abajo{
+background-color: #fff;
+padding: 15px;
+}
+header.abajo    .logo, header.abajo ul li i, header.abajo ul li a{
+    color: black;
+}
+.nav-menu-base{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.ul-menu-base{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+.ul-menu-base li i{
+    color: rgb(150, 187, 223);
+    transition: 0.7s;
+}
+.ul-menu-base li a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #408ac7;
+    padding: 5px;
+    margin: 0 15px;
+    font-family: Helvetica;
+    transition: 0.7s;
+    letter-spacing: 2px;
+}
+.back{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVa9t_UO64jJZtpPfUNMRcU8y5vFjtLRnqQA&s");
+    background-size: cover;
+    
+}
