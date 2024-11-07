@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Comglish</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="english.css">
+    <script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="menu-base">
+        <a href="#" class="logo">Comglish</a>
+        <nav class="nav-menu-base">
+            <ul class="ul-menu-base">
+                <li><i class="fas fa-home"></i><a href="#inicio">Home</a></li>
+                <li><i class="fas fa-book"></i><a href="#lecciones">Lessons</a></li>
+                <li><i class="fas fa-dumbbell"></i><a href="#ejercicios">Exercises</a></li>
+                <li><i class="fas fa-address-book"></i><a href="#recursos">Resources</a></li>
+                <li><i class="fas fa-user-friends"></i><a href="#contacto">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Botones de Autenticación -->
+        <div class="auth-buttons">
+            <a href="login.html" class="auth-btn login-btn" id="login-btn">Login</a>
+            <button class="auth-btn logout-btn" id="logout-btn" style="display: none;">Logout</button>
+        </div>
+    </header>
+
+    <section class="back"></section>
+
+    <script>
+        // Verifica el estado de inicio de sesión al cargar la página
+        document.addEventListener("DOMContentLoaded", function() {
+            const loginBtn = document.getElementById("login-btn");
+            const logoutBtn = document.getElementById("logout-btn");
+
+            if (localStorage.getItem("loggedIn") === "true") {
+                loginBtn.style.display = "none";
+                logoutBtn.style.display = "inline-block";
+            } else {
+                loginBtn.style.display = "inline-block";
+                logoutBtn.style.display = "none";
+            }
+
+            // Función para manejar el cierre de sesión
+            logoutBtn.addEventListener("click", function() {
+                localStorage.removeItem("loggedIn");
+                localStorage.removeItem("username");
+                window.location.href = "index.html";
+            });
+        });
+    </script>
+</body>
+</html>
